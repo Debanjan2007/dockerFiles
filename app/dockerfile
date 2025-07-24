@@ -1,0 +1,9 @@
+FROM node:20-alpine 
+WORKDIR /secondNodejs
+COPY package.json .
+RUN npm install
+COPY . .
+EXPOSE 8000
+CMD ["npm", "start"]
+# --- IGNORE ---
+# This Dockerfile sets up a Node.js application in a Docker container.
